@@ -1,81 +1,44 @@
 <template>
     <div class="">
 
-        <transition name="fade">
-            <div class="modal" v-if="modalAddress" @click="closeModalAddress">
-                <div class="modal-wrapper pb-4" @click.stop>
-                    <div class="modal-header text-center fs-14 gray--text mb-4">آدرس های منتخب من</div>
-                    <div class="modal-body">
-                        <div class="addresses" v-for="i in 3">
-                            <span class="primary--text fs-14 ml-2">خونه</span>
-                            <span class="gray--text fs-12">یزد، امامشهر، انتهای خیابان پلاک 5</span>
-                        </div>
-                        <v-btn
-                            class="mt-8"
-                            to="/map"
-                            color="accent"
-                            elevation="1"
-                            rounded
-                            block
-                            x-large>
-                            افزودن آدرس جدید
-                            <v-icon
-                                right
-                                dark>
-                                mdi-map-marker-plus-outline
-                            </v-icon>
-                        </v-btn>
-
+        <div class="row">
+            <div class="col-3 px-3">
+                <div class="categories">
+                    <div class="categories-header px-1 py-2">
+                        <img class="vam" src="/images/home/icon1.png" width="26">
+                        <span class="fs-12">دسته بندی کالاها</span>
                     </div>
-                    <div class="modal-footer"></div>
+                    <div class="categories-wrapper">
+                        <ul>
+                            <li v-for="i in 9">
+                                <nuxt-link to="/categories">
+                                    <img class="vam" src="/images/category/1.png">
+                                    <span class="fs-13 accent--text">شیر و فراورده های لبنی</span>
+                                </nuxt-link>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </transition>
-
-        <div class="current-address accent--text fs-13 fw-500">
-            آدرس من:
-            <span>
-                <span class="mr-1 primary--text">{{ address.name }}</span>
-                <span class="gray--text fw-300">{{ address.address }}</span>
-            </span>
-            <span class="float-left" @click="changeAddress">
-                <i class="material-icons success--text fs-18">sync_alt</i>
-            </span>
+            <div class="col-9">
+                <div class="slider-default">
+                    <div class="swiper-wrapper">
+                        <SwiperSlideHome v-for="i in 5"
+                            :key="i"
+                            link="/"
+                            title="12"
+                            className="br-15"
+                            image="/images/home/slide1.png" />
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div :class="{deactive: !selectedShop}">
-            <div class="slider-default mt-5">
-                <div class="swiper-wrapper">
-                    <SwiperSlideHome v-for="i in 5"
-                        :key="i"
-                        link="/"
-                        title="12"
-                        className="br-15"
-                        image="/images/home/slide1.png" />
-                </div>
-            </div>
-            <div class="slider-categories mt-2">
-                <div class="swiper-wrapper">
-                    <SwiperSlideHome v-for="i in 10"
-                        :key="i"
-                        link="/"
-                        title="12"
-                        className="br-10"
-                        image="/images/home/slide2.png" />
-                </div>
-            </div>
-
-            <div class="search mt-2">
-                <a-input
-                    className="br-10"
-                    icon="search"
-                    placeholder="جستجو..." />
-            </div>
-
+  
+        <div class="row">
             <div class="products-box mt-8">
-                <div class="darkGray--text fs-14 mb-2">پیشنهاد روز</div>
+                <div class="darkGray--text mb-2 mx-2">پیشنهاد روز</div>
                 <div class="swiper-wrapper">
-                    <SwiperSlideProduct v-for="i in 10"
+                    <SwiperSlideProductDesktop v-for="i in 10"
                         :key="i"
                         :id="i"
                         name="گوشت چرخ کرده مهیا"
@@ -84,26 +47,26 @@
                         image="/images/home/product.png" />
                 </div>
             </div>
+        </div>
 
-            <div class="products-box mt-8">
-                <div class="darkGray--text fs-14 mb-2">پرتخفیف ترین ها</div>
-                <div class="swiper-wrapper">
-                    <SwiperSlideProduct v-for="i in 10"
-                        :key="i+10"
-                        :id="i+10"
-                        name="گوشت چرخ کرده مهیا"
-                        priceDiscount="320000"
-                        price="300000"
-                        image="/images/home/product.png" />
-                </div>
+        <div class="row app-area my-10">
+            <div class="col-12 text-center">
+                <img src="/images/home/da.png">
             </div>
+            <div class="app-area-dls">
+                <a href="#"><img class="app-area-dl" src="/images/home/da1.png"></a>
+                <a href="#"><img class="app-area-dl" src="/images/home/da2.png"></a>
+                <a href="#"><img class="app-area-dl" src="/images/home/da3.png"></a>
+            </div>
+        </div>
 
-            <div class="products-box mt-8 mb-2">
-                <div class="darkGray--text fs-14 mb-2">جدیدترین ها</div>
+        <div class="row">
+            <div class="products-box mt-8">
+                <div class="darkGray--text mb-2 mx-2">پر تخفیف ترین ها</div>
                 <div class="swiper-wrapper">
-                    <SwiperSlideProduct v-for="i in 10"
-                        :key="i+20"
-                        :id="i+20"
+                    <SwiperSlideProductDesktop v-for="i in 10"
+                        :key="i"
+                        :id="i"
                         name="گوشت چرخ کرده مهیا"
                         priceDiscount="320000"
                         price="300000"
@@ -111,6 +74,23 @@
                 </div>
             </div>
         </div>
+
+        <div class="row my-4">
+            <div class="products-box mt-8">
+                <div class="darkGray--text mb-2 mx-2">جدیدترین ها</div>
+                <div class="swiper-wrapper">
+                    <SwiperSlideProductDesktop v-for="i in 10"
+                        :key="i"
+                        :id="i"
+                        name="گوشت چرخ کرده مهیا"
+                        priceDiscount="320000"
+                        price="300000"
+                        image="/images/home/product.png" />
+                </div>
+            </div>
+        </div>
+
+
     </div>
 </template>
 
@@ -122,16 +102,19 @@ export default {
     mounted(){
         this.$store.commit('_HOME', ['wmenu', 0]);
         new Swiper('.slider-default', {
-            slidesPerView: 'auto',
-            spaceBetween: 20,
-        });
-        new Swiper('.slider-categories', {
-            slidesPerView: 'auto',
-            spaceBetween: 10,
+            /*
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            */
+            autoplay: {
+                delay: 3000,
+            }
         });
         new Swiper('.products-box', {
             slidesPerView: 'auto',
-            spaceBetween: 15,
+            spaceBetween: 25,
         });
     },
     data(){
@@ -147,9 +130,6 @@ export default {
         closeModalAddress(){
             this.modalAddress = false;
         },
-        changeAddress(){
-            this.modalAddress = true;
-        }
     },
     computed:{
         selectedShop(){
@@ -160,23 +140,51 @@ export default {
 </script>
 
 <style>
+.vam{
+    vertical-align: middle;
+}
+.categories{
+    background-color: #fff;
+    box-shadow: 0 2px 15px -5px rgb(0,0,0,.20);
+    border-radius: 5px;
+}
+.categories .categories-header{
+    background-color: #f2f2f2;
+}
+.categories ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.categories li{
+    border-bottom: 1px solid #eee;
+}
+.categories a{
+    padding: 6px;
+    display: block;
+    text-decoration: none;
+}
+.slider-default{
+    overflow: hidden;
+}
+.app-area{
+    /*background-color: rgb(248,248,247);*/
+}
+.app-area-dls{
+    position: absolute;
+    margin-top: 230px;
+    right: calc(50% - 500px);
+}
+.app-area-dl{
+    display: block;
+    margin-top: 14px;
+    border-radius: 6px;
+}
+
+
+
 .deactive{
     opacity: 0;
-}
-.shops{
-    display: flex;
-    border: 1px solid lightgray;
-    border-radius: 10px;
-    padding: 10px 10px 0;
-    margin-bottom: 10px;
-}
-.shops .shop-logo .logo{
-    max-width: 64px;
-    max-height: 64px;
-    border-radius: 10px;
-}
-.shops .shop-star{
-    margin-top: -8px;
 }
 .addresses{
     border: 1px solid lightgray;

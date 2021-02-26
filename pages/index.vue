@@ -1,10 +1,12 @@
 <template>
     <div>
         <ul style="padding:100px;direction:ltr">
+            <li><nuxt-link to="/home">home</nuxt-link></li>
+
+            <!-- 
             <li><nuxt-link to="/onboarding">onboarding</nuxt-link></li>
             <li><nuxt-link to="/login">login</nuxt-link></li>
             <li><nuxt-link to="/map">map</nuxt-link></li>
-            <li><nuxt-link to="/home">home</nuxt-link></li>
             <li><nuxt-link to="/category">category</nuxt-link></li>
 
             <li><nuxt-link to="/categorySelect">categorySelect</nuxt-link></li>
@@ -27,6 +29,7 @@
             <li><nuxt-link to="/callus">callus</nuxt-link></li>
             <li><nuxt-link to="/support">support</nuxt-link></li>
             <li><nuxt-link to="/faq">faq</nuxt-link></li>
+             -->
         </ul>
     </div>
 </template>
