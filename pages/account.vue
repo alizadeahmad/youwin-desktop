@@ -1,87 +1,120 @@
 <template>
     <div class="account-wrapper">
-        <div class="account-menu avatar fs-14">
-            <div class="sl">
-                <div class="pt-5">
-                    <img src="/images/account/avatar_f.png">
-                    <div>
-                        <div class="fs-18 fw-600">سجاد ملاحسینی</div>
-                        <div class="mt-2 fs-14 gray--text db">اعتبار من: {{ $cn(250000) }} ریال</div>
+        <div class="fs-14 fw-600 mt-6 mb-2">حساب کاربری من</div>
+        <div class="row">
+            <div class="col-4">
+                <div class="account-menu fs-14">
+                    <nuxt-link class="sl active" to="/profile">
+                        <div>
+                            <img src="/images/account/user.svg">
+                            پروفایل من
+                        </div>
+                    </nuxt-link>
+                    <nuxt-link class="sl" to="/wallet">
+                        <div>
+                            <img src="/images/account/wallet.svg">
+                            کیف پول من
+                        </div>
+                    </nuxt-link>
+                    <nuxt-link class="sl" to="/address">
+                        <div>
+                            <img src="/images/account/signs.svg">
+                            آدرس های من
+                        </div>
+                    </nuxt-link>
+                    <nuxt-link class="sl" to="/share">
+                        <div>
+                            <img src="/images/account/share.svg">
+                            ثبت و ارسال کد معرف
+                        </div>
+                    </nuxt-link>
+                    <nuxt-link class="sl" to="/gift">
+                        <div>
+                            <img src="/images/account/gift.svg">
+                            کدهای هدیه من
+                        </div>
+                        <div class="l">
+                            <v-badge
+                                color="primary"
+                                content="2">
+                            </v-badge>
+                        </div>
+                    </nuxt-link>
+                    <nuxt-link class="sl" to="/wallet">
+                        <div>
+                            <img src="/images/account/wallet.svg">
+                            لیست خرید من
+                        </div>
+                    </nuxt-link>
+                    <nuxt-link class="sl" to="/support">
+                        <div>
+                            <img src="/images/account/support.svg">
+                            ارتباط با پشتیبانی
+                        </div>
+                    </nuxt-link>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col text-center">
+                        <img class="avatar" src="/images/account/avatar_f.png">
                     </div>
                 </div>
-                <div class="l">
-                    <img src="/images/account/exit.svg">
+                <div class="row">
+                    <div class="col"><a-input label="نام شما" required/></div>
+                    <div class="col"><a-input label="نام خانوادگی" required/></div>
+                </div>
+                <div class="row">
+                    <div class="col"><a-input label="کد ملی" required/></div>
+                    <div class="col"><a-input label="شماره همراه" required/></div>
+                </div>
+                <div class="row">
+                    <div class="col"><a-input label="تاریخ تولد" required/></div>
+                    <div class="col"><a-input label="شماره شبا" required/></div>
+                </div>
+                <div class="row">
+                    <div class="col">وضعیت تاهل</div>
+                    <div class="col">
+                        <label>
+                            <input type="radio" name="mariage">
+                            متاهل
+                        </label>
+                        <label>
+                            <input type="radio" name="mariage">
+                            مجرد
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">جنسیت</div>
+                    <div class="col">
+                        <label>
+                            <input type="radio" name="gender">
+                            زن
+                        </label>
+                        <label>
+                            <input type="radio" name="gender">
+                            مرد
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-8"></div>
+                    <div class="col-4">
+                        <v-btn @click="register" color="success" elevation="1" block x-large>
+                            تایید و ثبت اطلاعات
+                        </v-btn>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="fs-14 fw-600 mt-6 mb-2">حساب کاربری</div>
-        <div class="account-menu fs-14">
-            <nuxt-link class="sl" to="/profile">
-                <div>
-                    <img src="/images/account/user.svg">
-                    پروفایل من
-                </div>
-            </nuxt-link>
-            <nuxt-link class="sl" to="/wallet">
-                <div>
-                    <img src="/images/account/wallet.svg">
-                    کیف پول من
-                </div>
-            </nuxt-link>
-            <nuxt-link class="sl" to="/address">
-                <div>
-                    <img src="/images/account/signs.svg">
-                    آدرس های من
-                </div>
-            </nuxt-link>
-            <nuxt-link class="sl" to="/share">
-                <div>
-                    <img src="/images/account/share.svg">
-                    ثبت و ارسال کد معرف
-                </div>
-            </nuxt-link>
-            <nuxt-link class="sl" to="/gift">
-                <div>
-                    <img src="/images/account/gift.svg">
-                    کدهای هدیه من
-                </div>
-                <div class="l">
-                    <v-badge
-                        color="primary"
-                        content="2">
-                    </v-badge>
-                </div>
-            </nuxt-link>
-        </div>
-
-        <div class="fs-14 fw-600 mt-6 mb-2">درباره ما</div>
-        <div class="account-menu fs-14">
-            <nuxt-link class="sl" to="/callus">
-                <div>
-                    <img src="/images/account/phone-call.svg">
-                    اطلاعات تماس
-                </div>
-            </nuxt-link>
-            <nuxt-link class="sl" to="/support">
-                <div>
-                    <img src="/images/account/support.svg">
-                    ارتباط با پشتیبانی
-                </div>
-            </nuxt-link>
-            <nuxt-link class="sl" to="/faq">
-                <div>
-                    <img src="/images/account/chat.svg">
-                    سوالات متداول
-                </div>
-            </nuxt-link>
-        </div>
     </div>
 </template>
 
 <script>
 export default {
-    layout: 'default-with-header',
+    layout: 'home',
     mounted(){
         this.$store.commit('_HOME', ['title', 'منوی کاربری']);
     },
@@ -99,6 +132,8 @@ export default {
 .account-menu{
     border: 1px solid #eee;
     border-radius: 10px;
+    border-radius: 15px;
+    overflow: hidden;
 }
 .account-menu .sl{
     width: 100%;
@@ -135,20 +170,15 @@ export default {
     margin-left: 10px;
 }
 
-.account-menu.avatar{
-    border: 0px;
-    border-bottom: 1px solid #eee;
-    margin: -10px;
-    border-radius: 0;
+.avatar{
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    max-width: 164px;
+    max-height: 164px;
 }
-.account-menu.avatar img{
-    width: 96px;
-    border-radius: 50%;
-    margin: -35px 0 0 10px;
-}
-.account-menu.avatar .l img{
-    width: 24px;
-    border-radius: 0;
-    margin: 36px 0 0;
+
+.account-menu .active{
+    background-color: #5e5d5e;
+    color: #fff;
 }
 </style>

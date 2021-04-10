@@ -8,7 +8,7 @@
         </div>
   
         <div class="row">
-            <div class="col products-box">
+            <div class="col">
                 <div class="row">
                 	<div class="col-4">
                 		<div class="row p-relative">
@@ -49,9 +49,10 @@
                 				<div class="d-ib"><input class="ccount" type="number" value="1"></div>
                 			</div>
                 			<div class="d-ib mr-10">
-                                <v-btn @click="addCart" color="success" elevation="1" block x-large>
+                                <v-btn @click="addCart" color="success" elevation="1" rounded block x-large>
                                     افزودن به سبد خرید
                                 </v-btn>
+                                <div class="primary--text fs-14 mt-5 p-abs">1 عدد به سبد خرید اضافه شد</div>
                 			</div>
                 		</div>
                 	</div>
@@ -73,7 +74,6 @@
                 </div>
             </div>
         </div>
-
 
     </div>
 </template>
@@ -108,6 +108,7 @@ export default {
 </script>
 
 <style>
+.p-abs{position: absolute;}
 .d-ib{display: inline-block;}
 .td-lt{text-decoration: line-through;}
 .w-50{width: 50%;}
