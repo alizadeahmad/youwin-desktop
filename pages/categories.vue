@@ -64,8 +64,8 @@ export default {
     data(){
         return{
             items: [
-                {text: 'دسته بندی ها', disabled: true, href: '/'},
-                {text: 'شیر و فراورده های لبنی', disabled: false, href: '/'},
+                {text: 'دسته بندی ها', disabled: false, href: '/'},
+                {text: 'شیر و فراورده های لبنی', disabled: true, href: '/'},
             ],
             category: 'شیر و فراورده های لبنی'
         }

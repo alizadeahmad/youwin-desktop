@@ -65,6 +65,14 @@ h1{
 .mt--15{margin-top: -15px;}
 .mt--20{margin-top: -20px;}
 
+.vam{vertical-align: middle;}
+.vab{vertical-align: bottom;}
+.vatt{vertical-align: text-top;}
+
+.cursor-pointer{
+	cursor: pointer;
+}
+
 /* MODAL */
 .modal{
 	width: 100%;
