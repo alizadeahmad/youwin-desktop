@@ -108,7 +108,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 </template>
 
@@ -126,9 +125,7 @@ export default {
 </script>
 
 <style scoped>
-.db{
-    display: block !important;
-}
+.db{display: block !important;}
 .account-menu{
     border: 1px solid #eee;
     border-radius: 10px;
@@ -169,6 +166,10 @@ export default {
     vertical-align: middle;
     margin-left: 10px;
 }
+.account-menu .active{
+    background-color: #5e5d5e;
+    color: #fff;
+}
 
 .avatar{
     border: 2px solid #ddd;
@@ -177,8 +178,4 @@ export default {
     max-height: 164px;
 }
 
-.account-menu .active{
-    background-color: #5e5d5e;
-    color: #fff;
-}
 </style>
