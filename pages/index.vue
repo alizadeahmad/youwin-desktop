@@ -6,6 +6,7 @@
             <li><nuxt-link to="/categories">categories</nuxt-link></li>
             <li><nuxt-link to="/product">product</nuxt-link></li>
             <li><nuxt-link to="/account">account</nuxt-link></li>
+            <li><nuxt-link to="/wallet">wallet</nuxt-link></li>
         </ul>
     </div>
 </template>
