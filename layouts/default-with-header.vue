@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app> 
   	<div class="header">
 		<div class="header-sec">
 			<img src="/images/back.png" style="width:32px;margin:14px 14px 14px 8px;vertical-align:middle" @click="to">

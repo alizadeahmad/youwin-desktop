@@ -8,7 +8,7 @@
             <li><nuxt-link to="/account">account</nuxt-link></li>
             <li><nuxt-link to="/wallet">wallet</nuxt-link></li>
             <li><nuxt-link to="/address">address</nuxt-link></li>
-            <li><nuxt-link to="/newaddress">new address</nuxt-link></li>
+            <li><nuxt-link to="/newaddress">new address</nuxt-link></li> 
         </ul>
     </div>
 </template>

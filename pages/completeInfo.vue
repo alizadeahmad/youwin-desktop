@@ -1,6 +1,6 @@
 <template>
     <div class="cart-wrapper mt-6">
-
+ 
         <transition name="fade">
             <div class="modal align-items-end" v-if="timeModal" @click="closeModal">
                 <div class="modal-wrapper pb-4" @click.stop>

@@ -34,7 +34,7 @@
             </div>
         </div>
   
-        <div class="row">
+        <div class="row ofh">
             <div class="products-box mt-8">
                 <div class="darkGray--text mb-2 mx-2">پیشنهاد روز</div>
                 <div class="swiper-wrapper">
@@ -60,7 +60,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row ofh">
             <div class="products-box mt-8">
                 <div class="darkGray--text mb-2 mx-2">پر تخفیف ترین ها</div>
                 <div class="swiper-wrapper">
@@ -75,7 +75,7 @@
             </div>
         </div>
 
-        <div class="row my-4">
+        <div class="row my-4 ofh">
             <div class="products-box mt-8">
                 <div class="darkGray--text mb-2 mx-2">جدیدترین ها</div>
                 <div class="swiper-wrapper">

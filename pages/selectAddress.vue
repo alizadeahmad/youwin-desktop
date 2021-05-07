@@ -1,7 +1,7 @@
 <template>
     <div class="address-wrapper w-100 h-100 d">
 
-        <transition name="fade">
+        <transition name="fade"> 
             <div class="modal" v-if="modal" @click="closeModal">
                 <div class="modal-wrapper pb-4" @click.stop>
                     <div class="modal-header fs-12 mb-10 fw-500">

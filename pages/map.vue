@@ -1,6 +1,6 @@
 <template>
     <div class="primary w-100 h-100 d">
-
+ 
         <transition name="fade">
             <div class="modal" v-if="modal" @click="closeModal">
                 <div class="modal-wrapper pb-4" @click.stop>

@@ -1,7 +1,7 @@
 <template>
     <div class="order-wrapper">
         <div class="order-empty" v-if="!orders">
-            <div>
+            <div> 
                 <img src="/images/orders/invoice.png">
                 <div class="mt-4 fs-14 gray--text">سفارشات من در این قسمت نمایش داده می شوند</div>
                 <!-- temp button -->

@@ -1,6 +1,6 @@
 <template>
     <div class="notif-wrapper">
-
+ 
         <div class="">            
             <v-tabs
                 v-model="tabSelected"

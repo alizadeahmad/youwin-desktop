@@ -1,7 +1,6 @@
 <template>
     <div class="">
 
-
         <div class="fs-14 fw-600 mt-6 mb-2">حساب کاربری من / آدرس های من / افزودن آدرس جدید</div>
 
         <div class="row">

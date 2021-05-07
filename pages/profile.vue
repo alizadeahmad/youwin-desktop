@@ -1,5 +1,5 @@
 <template>
-    <div class="profile-wrapper">
+    <div class="profile-wrapper"> 
         <div class="profile-avatar">
             <div class="change-avatar">
                 <v-btn

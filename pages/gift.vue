@@ -1,6 +1,6 @@
 <template>
     <div class="gift-wrapper">
-
+ 
         <div class="gift" v-for="i in 2">
             <span class="r fs-14 text-center">
                 <div>کد تخفیف ویژه عید غدیر خم</div>

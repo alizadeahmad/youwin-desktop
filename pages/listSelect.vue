@@ -1,6 +1,6 @@
 <template>
     <div class="list-wrapper mt-6">
-
+ 
             <div class="search mt-2">
                 <a-input
                     className="br-10"

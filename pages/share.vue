@@ -7,7 +7,7 @@
                     <a-input
                         v-model="vModel"
                         label="کد تخفیف"
-                        required />
+                        required /> 
                 </div>
                 <div class="l">
                     <v-btn

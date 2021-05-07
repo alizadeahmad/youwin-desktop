@@ -1,6 +1,6 @@
 <template>
     <div class="list-wrapper">
-
+ 
         <transition name="fade">
             <div class="modal" v-if="showListModal" @click="closeShowListModal">
                 <div class="modal-wrapper pb-4" @click.stop>

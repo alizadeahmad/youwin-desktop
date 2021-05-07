@@ -1,5 +1,5 @@
 <template>
-    <div class="categories">
+    <div class="categories"> 
         <nuxt-link class="category black--text" v-for="i in 5" to="/categorySelect" :key="i">
             <img src="/images/home/product.png">
             <p>مواد پروتئینی</p>

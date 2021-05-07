@@ -1,6 +1,6 @@
 <template>
     <div class="order-wrapper">
-
+ 
         <div class="fs-12 mt-4 mb-2">جزئیات سفارش</div>
         <div class="order fs-14">
             <div class="sl">

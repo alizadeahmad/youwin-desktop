@@ -1,7 +1,6 @@
 <template>
     <div class="cart-wrapper mt-6">
 
-
         <div class="summary-list">
             <div class="sl">
                 <div class="fs-14 gray--text">مجموع سفارش:</div><div class="l">{{ $cn(110000) }} ریال</div>

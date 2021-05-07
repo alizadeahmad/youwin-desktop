@@ -1,6 +1,6 @@
 <template>
     <div class="category-wrapper">
-
+ 
         <transition name="fade">
             <div class="modal align-items-end" v-if="modalFilter" @click="closeModalFilter">
                 <div class="modal-wrapper pb-4" @click.stop>

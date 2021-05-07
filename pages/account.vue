@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-4">
                 <div class="account-menu fs-14">
-                    <nuxt-link class="sl active" to="/profile">
+                    <nuxt-link class="sl active" to="/account">
                         <div>
                             <img src="/images/account/user.svg">
                             پروفایل من

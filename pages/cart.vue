@@ -1,7 +1,7 @@
 <template>
     <div class="cart-wrapper">
         <div class="cart-empty" v-if="!cart.count">
-            <div>
+            <div> 
                 <img src="/images/cart/preshoppingcart.svg">
                 <div class="mt-4 fs-14 gray--text">سبد خرید شما خالی است</div>
             </div>

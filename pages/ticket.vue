@@ -9,7 +9,6 @@
         </div>
 
 
-
         <div class="input-text">
             <input type="text" v-model="message" placeholder="متن پیام شما...">
             <img src="/images/support/send.png" @click="sendMessage">

@@ -1,6 +1,6 @@
 <template>
     <div class="faqs-wrapper">
-
+ 
         <div class="faq mb-12" v-for="faq in faqs">
             <div class="pr-4 fs-14 mt-4">{{ faq.title }}</div>
             <v-expansion-panels accordion>

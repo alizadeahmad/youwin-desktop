@@ -60,6 +60,7 @@ export default {
             spaceBetween: 25,
         });
         */
+
     },
     data(){
         return{

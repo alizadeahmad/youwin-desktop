@@ -93,152 +93,162 @@
     </transition>
 
     <div class="header">
-      <div class="header-sec text-right" style="max-width:200px;">
-        <nuxt-link to="/"><img src="/images/home/logo.png" style="height:42px;margin:19px;"></nuxt-link>
-      </div>
-      <div class="header-sec">
-        <div class="search mt-5">
-          <a-input placeholder="جستجو..." />
-          <v-btn class="search-btn" color="primary" elevation="1" to="/search">
-            <i class="material-icons">search</i>
-          </v-btn>
+      <div class="wrp df">
+        <div class="header-sec text-right" style="max-width:200px;">
+          <nuxt-link to="/"><img src="/images/home/logo.png" style="height:42px;margin:19px;"></nuxt-link>
         </div>
-      </div>
-      <div class="header-sec text-left mx-5 mt-3">
-        <div class="account fs-14">
-          <div class="ml-6 vam cursor-pointer">
-            <img src="/images/account/avatar_f.png" style="vertical-align:middle;border-radius:50%;width:42px;margin:9px 5px;">
-            <span v-if="loggedin" @click="li_menu_switch">
-                <span class="fs-16 black--text">سلام سجاد</span>
-                <span class="vatt"><i class="material-icons">expand_more</i></span>
-                <span class="gray--text d-block fs-14 mt--20 text-center mr-8">خوش اومدی</span>
-            </span>
-            <span v-else>
-                <!-- <nuxt-link class="accent--text" to="/login">ورود / ثبت نام</nuxt-link> -->
-                <span class="accent--text" @click="openLoginModal">ورود / ثبت نام</span>
-            </span>
-            <div v-if="loggedin_menu" class="nav-profile">
-                <ul>
-                    <li>
-                        <nuxt-link to="/">
-                            <span><img src="/images/home/prof1.png"></span>
-                            <span>حساب کاربری</span>
-                        </nuxt-link>
-                    </li>
-                    <li>
-                        <nuxt-link to="/">
-                            <span><img src="/images/home/prof2.png"></span>
-                            <span>پیام های من</span>
-                        </nuxt-link>
-                    </li>
-                    <li>
-                        <nuxt-link to="/">
-                            <span><img src="/images/home/prof3.png"></span>
-                            <span>سفارشات من</span>
-                        </nuxt-link>
-                    </li>
-                </ul>
-            </div>
-          </div>
-          <div>
-            <v-btn class="cart-i" color="primary" elevation="1" to="/cart">
-              <img src="/images/home/shoppingcart_w.png" style="width:32px;border-left:1px solid rgba(255,255,255,.5);padding-left:10px">
-              <span class="mx-5"><span class="cart-price">{{ cart_price }}</span> تومان</span>
+        <div class="header-sec">
+          <div class="search mt-5">
+            <a-input placeholder="جستجو..." />
+            <v-btn class="search-btn" color="primary" elevation="1" to="/search">
+              <i class="material-icons">search</i>
             </v-btn>
+          </div>
+        </div>
+        <div class="header-sec text-left mx-5 mt-3">
+          <div class="account fs-14">
+            <div class="ml-6 vam cursor-pointer">
+              <img src="/images/account/avatar_f.png" style="vertical-align:middle;border-radius:50%;width:42px;margin:9px 5px;">
+              <span v-if="loggedin" @click="li_menu_switch">
+                  <span class="fs-16 black--text">سلام سجاد</span>
+                  <span class="vatt"><i class="material-icons">expand_more</i></span>
+                  <span class="gray--text d-block fs-14 mt--20 text-center mr-8">خوش اومدی</span>
+              </span>
+              <span v-else>
+                  <!-- <nuxt-link class="accent--text" to="/login">ورود / ثبت نام</nuxt-link> -->
+                  <span class="accent--text" @click="openLoginModal">ورود / ثبت نام</span>
+              </span>
+              <div v-if="loggedin_menu" class="nav-profile">
+                  <ul>
+                      <li>
+                          <nuxt-link to="/">
+                              <span><img src="/images/home/prof1.png"></span>
+                              <span>حساب کاربری</span>
+                          </nuxt-link>
+                      </li>
+                      <li>
+                          <nuxt-link to="/">
+                              <span><img src="/images/home/prof2.png"></span>
+                              <span>پیام های من</span>
+                          </nuxt-link>
+                      </li>
+                      <li>
+                          <nuxt-link to="/">
+                              <span><img src="/images/home/prof3.png"></span>
+                              <span>سفارشات من</span>
+                          </nuxt-link>
+                      </li>
+                  </ul>
+              </div>
+            </div>
+            <div>
+              <v-btn class="cart-i" color="primary" elevation="1" to="/cart">
+                <img src="/images/home/shoppingcart_w.png" style="width:32px;border-left:1px solid rgba(255,255,255,.5);padding-left:10px">
+                <span class="mx-5"><span class="cart-price">{{ cart_price }}</span> تومان</span>
+              </v-btn>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div class="body">
       <div class="nav">
-        <div class="shop-info">
-          <img class="shop-img" src="/images/home/ds.png">
-          <span class="fs-15 fw-500 mr-2 gray--text">انتخاب کنید</span>
-          <span class="vab"><i class="material-icons">expand_more</i></span>
-        </div>
-        <div class="menus">
-          <ul>
-            <li class="active">
-              <nuxt-link to="/">صفحه اصلی</nuxt-link>
-            </li>
-            <li>
-              <nuxt-link to="/">درباره ما</nuxt-link>
-            </li>
-            <li>
-              <nuxt-link to="/">تماس با ما</nuxt-link>
-            </li>
-            <li>
-              <nuxt-link to="/">مجله خبری</nuxt-link>
-            </li>
-          </ul>
-        </div>
-        <div class="current-address accent--text fs-13 fw-500">
-          آدرس من:
-          <span>
-            <span class="mr-1 primary--text">{{ address.name }}</span>
-            <span class="gray--text fw-300">{{ address.address }}</span>
-          </span>
-          <span class="float-left" @click="changeAddress">
-            <i class="material-icons success--text fs-18">sync_alt</i>
-          </span>
+        <div class="wrp df">
+          <div class="shop-info">
+            <img class="shop-img" src="/images/home/ds.png">
+            <span class="fs-15 fw-500 mr-2 gray--text">انتخاب کنید</span>
+            <span class="vab"><i class="material-icons">expand_more</i></span>
+          </div>
+          <div class="menus">
+            <ul>
+              <li class="active">
+                <nuxt-link to="/">صفحه اصلی</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/">درباره ما</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/">تماس با ما</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/">مجله خبری</nuxt-link>
+              </li>
+            </ul>
+          </div>
+          <div class="current-address accent--text fs-13 fw-500">
+            آدرس من:
+            <span>
+              <span class="mr-1 primary--text">{{ address.name }}</span>
+              <span class="gray--text fw-300">{{ address.address }}</span>
+            </span>
+            <span class="float-left" @click="changeAddress">
+              <i class="material-icons success--text fs-18">sync_alt</i>
+            </span>
+          </div>
         </div>
       </div>
-      <Nuxt />
+      <div class="wrp">
+        <Nuxt />
+      </div>
     </div>
     <div class="footer">
-      <div class="foot-top df">
-        <div class="f1">
-          <img src="/images/footer/1.png">
-          <span>تضمین اصالت کالا</span>
-        </div>
-        <div class="f1">
-          <img src="/images/footer/2.png">
-          <span>پرداخت اینترنتی</span>
-        </div>
-        <div class="f1">
-          <img src="/images/footer/3.png">
-          <span>ارسال سریع سفارشات</span>
-        </div>
-        <div class="f1">
-          <img src="/images/footer/4.png">
-          <span>پشتیبانی 24 ساعته</span>
+      <div class="foot-top">
+        <div class="wrp1 df">
+          <div class="f1">
+            <img src="/images/footer/1.png">
+            <span>تضمین اصالت کالا</span>
+          </div>
+          <div class="f1">
+            <img src="/images/footer/2.png">
+            <span>پرداخت اینترنتی</span>
+          </div>
+          <div class="f1">
+            <img src="/images/footer/3.png">
+            <span>ارسال سریع سفارشات</span>
+          </div>
+          <div class="f1">
+            <img src="/images/footer/4.png">
+            <span>پشتیبانی 24 ساعته</span>
+          </div>
         </div>
       </div>
-      <div class="foot-mid df fw-300">
-        <div class="f1">
-          <div class="text-center"><img src="/images/home/logo.png" width="168"></div>
-          <div class="fs-13">سیت بای یک سامانه سفارش و خرید اینترنتی اقلام ضروری است که به شما این امکان را می دهد تا محصولات مورد نظر خود را به صورت آنلاین از نزدیک ترین فروشگاه سفارش دهید و بدون صرف وقت و انرژی جهت مراجعه به فروشگاه سفارش خود را درب منزل تحویل بگیرید</div>
-          <div class="mt-4 fm-info"><img src="/images/signs.svg">آدرس: یزد، امامشهر، انتهای بلوار کارگر</div>
-          <div class="mt-4 cn fm-info"><img src="/images/phone-call.svg">{{ $cn('لفن: 03535229262 - 09134545624', 0) }}</div>
-          <div></div>
-        </div>
-        <div class="f1 fm-soc pt-7 text-center">
-          <div>شبکه های اجتماعی</div>
-          <div class="mt-10">
-            <ul>
-              <li><a href="#"><img src="/images/share/socials/instagram.svg">اینستاگرام</a></li>
-              <li><a href="#"><img src="/images/share/socials/twitter.svg">توییتر</a></li>
-              <li><a href="#"><img src="/images/share/socials/telegram.svg">تلگرام</a></li>
-              <li><a href="#"><img src="/images/share/socials/whatsapp.svg">واتساپ</a></li>
-            </ul>
+      <div class="foot-mid fw-300">
+        <div class="wrp df">
+          <div class="f1">
+            <div class="text-center"><img src="/images/home/logo.png" width="168"></div>
+            <div class="fs-13">سیت بای یک سامانه سفارش و خرید اینترنتی اقلام ضروری است که به شما این امکان را می دهد تا محصولات مورد نظر خود را به صورت آنلاین از نزدیک ترین فروشگاه سفارش دهید و بدون صرف وقت و انرژی جهت مراجعه به فروشگاه سفارش خود را درب منزل تحویل بگیرید</div>
+            <div class="mt-4 fm-info"><img src="/images/signs.svg">آدرس: یزد، امامشهر، انتهای بلوار کارگر</div>
+            <div class="mt-4 cn fm-info"><img src="/images/phone-call.svg">{{ $cn('لفن: 03535229262 - 09134545624', 0) }}</div>
+            <div></div>
           </div>
-        </div>
-        <div class="f1 fm-lnk pt-7 text-center">
-          <div>لینک های مفید</div>
-          <div class="mt-10">
-            <ul>
-              <li><a href="#">تماس با ما</a></li>
-              <li><a href="#">درباره ما</a></li>
-              <li><a href="#">راهنمای خرید</a></li>
-              <li><a href="#">قوانین و مقررات</a></li>
-              <li><a href="#">سوالات متداول</a></li>
-              <li><a href="#">حفظ حریم خصوص</a></li>
-            </ul>
+          <div class="f1 fm-soc pt-7 text-center">
+            <div>شبکه های اجتماعی</div>
+            <div class="mt-10">
+              <ul>
+                <li><a href="#"><img src="/images/share/socials/instagram.svg">اینستاگرام</a></li>
+                <li><a href="#"><img src="/images/share/socials/twitter.svg">توییتر</a></li>
+                <li><a href="#"><img src="/images/share/socials/telegram.svg">تلگرام</a></li>
+                <li><a href="#"><img src="/images/share/socials/whatsapp.svg">واتساپ</a></li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="f1 fm-cer pt-7 text-center">
-          <div>مجوز های ما</div>
-          <div class="mt-10"><img src="/images/enamad.png"></div>
+          <div class="f1 fm-lnk pt-7 text-center">
+            <div>لینک های مفید</div>
+            <div class="mt-10">
+              <ul>
+                <li><a href="#">تماس با ما</a></li>
+                <li><a href="#">درباره ما</a></li>
+                <li><a href="#">راهنمای خرید</a></li>
+                <li><a href="#">قوانین و مقررات</a></li>
+                <li><a href="#">سوالات متداول</a></li>
+                <li><a href="#">حفظ حریم خصوص</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="f1 fm-cer pt-7 text-center">
+            <div>مجوز های ما</div>
+            <div class="mt-10"><img src="/images/enamad.png"></div>
+          </div>
         </div>
       </div>
       <div class="foot-bot">
@@ -326,9 +336,6 @@ export default {
 
 </script>
 <style>
-.df {
-  display: flex;
-}
 
 .f1 {
   flex: 1;

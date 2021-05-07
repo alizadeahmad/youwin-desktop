@@ -1,5 +1,5 @@
 <template>
-    <div class="primary w-100 h-100">
+    <div class="primary w-100 h-100"> 
         <div class="logo-wrapper text-center">
             <img class="logo" src="/images/login/logo.png">
         </div>
