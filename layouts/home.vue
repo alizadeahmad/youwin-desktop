@@ -154,28 +154,69 @@
     <div class="body">
       <div class="nav">
         <div class="wrp df">
-          <div class="shop-info">
+          <div class="f1 shop-info">
             <img class="shop-img" src="/images/home/ds.png">
             <span class="fs-15 fw-500 mr-2 gray--text">انتخاب کنید</span>
             <span class="vab"><i class="material-icons">expand_more</i></span>
           </div>
-          <div class="menus">
-            <ul>
-              <li class="active">
-                <nuxt-link to="/">صفحه اصلی</nuxt-link>
+          <div class="f5 menus-w">
+            <ul class="menus">
+              <li class="menu-base">
+                <span>مواد غذایی</span>
+                <ul class="menu-sub">
+                  <li>
+                    <span>
+                      <nuxt-link to="/">
+                        نوشیدنی ها
+                        <i class="material-icons vam fs-16">chevron_left</i>
+                    </nuxt-link>
+                    </span>
+                    <span><nuxt-link to="/">چای</nuxt-link></span>
+                    <span><nuxt-link to="/">قهوه</nuxt-link></span>
+                    <span><nuxt-link to="/">گازدار</nuxt-link></span>
+                    <span><nuxt-link to="/">آبمیوه</nuxt-link></span>
+                  </li>
+                  <li>
+                    <span>
+                      <nuxt-link to="/">
+                        خوار و بار
+                        <i class="material-icons vam fs-16">chevron_left</i>
+                      </nuxt-link>
+                    </span>
+                    <span><nuxt-link to="/">برنج</nuxt-link></span>
+                    <span><nuxt-link to="/">نان</nuxt-link></span>
+                    <span><nuxt-link to="/">ماکارونی</nuxt-link></span>
+                  </li>
+                </ul>
               </li>
-              <li>
-                <nuxt-link to="/">درباره ما</nuxt-link>
-              </li>
-              <li>
-                <nuxt-link to="/">تماس با ما</nuxt-link>
-              </li>
-              <li>
-                <nuxt-link to="/">مجله خبری</nuxt-link>
+              <li class="menu-base">
+                <span>مد و پوشاک</span>
+                <ul class="menu-sub">
+                  <li>
+                    <span>
+                      <nuxt-link to="/">
+                        مردانه
+                        <i class="material-icons vam fs-16">chevron_left</i>
+                      </nuxt-link>
+                    </span>
+                    <span><nuxt-link to="/">زمستانه</nuxt-link></span>
+                    <span><nuxt-link to="/">تابستانه</nuxt-link></span>
+                  </li>
+                  <li>
+                    <span>
+                      <nuxt-link to="/">
+                        زنانه
+                        <i class="material-icons vam fs-16">chevron_left</i>
+                      </nuxt-link>
+                    </span>
+                    <span><nuxt-link to="/">بهاره</nuxt-link></span>
+                    <span><nuxt-link to="/">پاییزه</nuxt-link></span>
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
-          <div class="current-address accent--text fs-13 fw-500">
+          <div class="f1 current-address accent--text fs-13 fw-500">
             آدرس من:
             <span>
               <span class="mr-1 primary--text">{{ address.name }}</span>
@@ -333,13 +374,11 @@ export default {
   },
 
 };
-
 </script>
 <style>
 
-.f1 {
-  flex: 1;
-}
+.f1 {flex: 1;}
+.f5 {flex: 5;}
 
 .header {
   position: fixed;
@@ -396,10 +435,63 @@ export default {
   vertical-align: bottom;
 }
 
+.menus-w ul{
+  padding: 0;
+  margin: 0;
+}
+.menus-w a{
+  color: #000;
+  text-decoration: none;
+  display: block;
+  padding: 7px 0;
+}
+.menus-w a:hover{
+  color: #fc5830;
+}
 .menus {
   margin-right: 50px;
+  position: relative;
+  z-index: 999;
+}
+.menus li{
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px;
+  margin: 0 5px;
+  font-size: 15px;
 }
 
+.menus .menu-sub{
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 40px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 1px 5px 10px rgba(0,0,0,.25);
+}
+.menus .menu-sub li{
+  padding: 0;
+  min-width: 160px;
+}
+.menus .menu-sub li:not(:last-child){
+  margin-left: 25px;
+}
+.menus .menu-sub li span{
+  display: block;
+  font-size: 12px;
+}
+.menus .menu-sub li span:first-child{
+  font-size: 14px;
+  font-weight: 900;
+  border-bottom: 1px solid #ddd;
+}
+.menus .menu-base:hover > .menu-sub{
+  display: block;
+}
+
+/*
 .menus li.active {
   border-bottom: 3px solid #fc5830;
 }
@@ -408,17 +500,12 @@ export default {
   color: #000;
 }
 
-.menus li {
-  padding: 10px;
-  margin: 0 5px;
-  font-size: 15px;
-  display: inline-block;
-}
 
 .menus li a {
   color: #373e48;
   text-decoration: none;
 }
+*/
 
 .current-address {
   flex: 1;

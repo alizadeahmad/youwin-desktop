@@ -2,25 +2,7 @@
     <div class="">
 
         <div class="row">
-            <div class="col-3 px-3">
-                <div class="categories">
-                    <div class="categories-header px-1 py-2">
-                        <img class="vam" src="/images/home/icon1.png" width="26">
-                        <span class="fs-12">دسته بندی کالاها</span>
-                    </div>
-                    <div class="categories-wrapper">
-                        <ul>
-                            <li v-for="i in 9">
-                                <nuxt-link to="/categories">
-                                    <img class="vam" src="/images/category/1.png">
-                                    <span class="fs-13 accent--text">شیر و فراورده های لبنی</span>
-                                </nuxt-link>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-9">
+            <div class="col" style="max-width:800px;">
                 <div class="slider-default">
                     <div class="swiper-wrapper">
                         <SwiperSlideHome v-for="i in 5"
@@ -31,6 +13,10 @@
                             image="/images/home/slide1.png" />
                     </div>
                 </div>
+            </div>
+            <div class="col">
+                <div><img class="br-15" src="/images/home/adv1.png"></div>
+                <div><img class="br-15" src="/images/home/adv2.png"></div>
             </div>
         </div>
   
