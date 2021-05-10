@@ -12,6 +12,9 @@
                             className="br-15"
                             image="/images/home/slide1.png" />
                     </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
             </div>
             <div class="col">
@@ -21,7 +24,7 @@
         </div>
   
         <div class="row ofh">
-            <div class="products-box mt-8">
+            <div class="products-box mt-8 wrp">
                 <div class="darkGray--text mb-2 mx-2">پیشنهاد روز</div>
                 <div class="swiper-wrapper">
                     <SwiperSlideProductDesktop v-for="i in 10"
@@ -47,7 +50,7 @@
         </div>
 
         <div class="row ofh">
-            <div class="products-box mt-8">
+            <div class="products-box mt-8 wrp">
                 <div class="darkGray--text mb-2 mx-2">پر تخفیف ترین ها</div>
                 <div class="swiper-wrapper">
                     <SwiperSlideProductDesktop v-for="i in 10"
@@ -62,7 +65,7 @@
         </div>
 
         <div class="row my-4 ofh">
-            <div class="products-box mt-8">
+            <div class="products-box mt-8 wrp">
                 <div class="darkGray--text mb-2 mx-2">جدیدترین ها</div>
                 <div class="swiper-wrapper">
                     <SwiperSlideProductDesktop v-for="i in 10"
@@ -88,11 +91,14 @@ export default {
     mounted(){
         this.$store.commit('_HOME', ['wmenu', 0]);
         new Swiper('.slider-default', {
-            /*
+            pagination: {
+              el: ".swiper-pagination",
+            },
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
+            /*
             */
             autoplay: {
                 delay: 3000,
@@ -129,6 +135,8 @@ export default {
 .vam{
     vertical-align: middle;
 }
+.slider-default{position: relative;}
+.swiper-button-prev, .swiper-button-next{transform: scale(.6);}
 .categories{
     background-color: #fff;
     box-shadow: 0 2px 15px -5px rgb(0,0,0,.20);
