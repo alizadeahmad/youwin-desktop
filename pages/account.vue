@@ -40,9 +40,9 @@
                             </v-badge>
                         </div>
                     </nuxt-link>
-                    <nuxt-link class="sl" to="/wallet">
+                    <nuxt-link class="sl" to="/list">
                         <div>
-                            <img src="/images/account/wallet.svg">
+                            <img src="/images/account/list.svg">
                             لیست خرید من
                         </div>
                     </nuxt-link>

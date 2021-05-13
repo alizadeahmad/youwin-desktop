@@ -1,17 +1,28 @@
 <template>
     <div class="list-wrapper mt-6">
  
-            <div class="search mt-2">
-                <a-input
-                    className="br-10"
-                    icon="search"
-                    placeholder="جستجوی محصول..." />
+            <div class="search row mt-2">
+                <div class="col">
+                    <a-input
+                        className="br-10"
+                        icon="search"
+                        placeholder="جستجوی محصول..." />
+                </div>
+
+                <div class="col add-list" style="max-width:300px;">
+                    <v-btn
+                        color="secondary"
+                        elevation="1"
+                        to="/list">
+                        تایید و ثبت لیست خرید
+                    </v-btn>
+                </div>
             </div>
 
             <div class="products-box mt-8">
                 <div class="darkGray--text fs-14 mb-2">سفارشات قبلی من</div>
                 <div class="swiper-wrapper">
-                    <SwiperSlideProduct v-for="i in 10"
+                    <SwiperSlideProductDesktop v-for="i in 10"
                         :key="i"
                         :id="i"
                         name="گوشت چرخ کرده مهیا"
@@ -24,7 +35,7 @@
             <div class="products-box mt-8">
                 <div class="darkGray--text fs-14 mb-2">جدیدترین ها</div>
                 <div class="swiper-wrapper">
-                    <SwiperSlideProduct v-for="i in 10"
+                    <SwiperSlideProductDesktop v-for="i in 10"
                         :key="i"
                         :id="i"
                         name="گوشت چرخ کرده مهیا"
@@ -35,23 +46,14 @@
             </div>
 
 
-        <div class="list-summary gray--text">
+        <!-- 
+        <div class="list-summary gray- -text">
             <div class="mt-2 fs-14">
                 <span>تعداد اقلام انتخابی:</span>
                 <span class="float-left">2 عدد</span>
             </div>
-            <div class="mt-4">
-                <v-btn
-                    color="secondary"
-                    elevation="1"
-                    rounded
-                    block
-                    to="/list"
-                    x-large>
-                    تایید و ثبت لیست خرید
-                </v-btn>
-            </div>
         </div>
+         -->
     </div>
 </template>
 
@@ -59,7 +61,7 @@
 import Swiper from 'swiper';
 import 'swiper/css/swiper.css';
 export default {
-    layout: 'default-with-header',
+    layout: 'home',
     mounted(){
         this.$store.commit('_HOME', ['title', 'لیست خرید خانه']);
         new Swiper('.products-box', {
@@ -82,11 +84,14 @@ export default {
 }
 .list-summary{
     background-color: #f2f2f2;
-    position: fixed;
+    /*position: fixed;*/
     bottom: 0px;
     width: calc(100% - 20px);
     padding: 20px;
     border-radius: 15px 15px 0 0;
     z-index: 1;
+}
+.add-list a{
+    padding: 24px !important;
 }
 </style>

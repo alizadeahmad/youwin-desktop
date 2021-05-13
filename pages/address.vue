@@ -1,7 +1,6 @@
 <template>
     <div class="address-wrapper">
 
-
         <div class="fs-14 fw-600 mt-6 mb-2">حساب کاربری من</div>
         <div class="row">
             <div class="col-4">
@@ -42,9 +41,9 @@
                             </v-badge>
                         </div>
                     </nuxt-link>
-                    <nuxt-link class="sl" to="/wallet">
+                    <nuxt-link class="sl" to="/list">
                         <div>
-                            <img src="/images/account/wallet.svg">
+                            <img src="/images/account/list.svg">
                             لیست خرید من
                         </div>
                     </nuxt-link>
